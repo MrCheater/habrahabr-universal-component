@@ -1,3 +1,5 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import DonutChart from './DonutChart';
 
 const proto = Object.create(HTMLElement.prototype, {
@@ -6,13 +8,13 @@ const proto = Object.create(HTMLElement.prototype, {
             const mountPoint = document.createElement('span');
             this.createShadowRoot().appendChild(mountPoint);
             const props = {
-                radius          : this.getAttribute('radius'),
-                holeSize        : this.getAttribute('hole-size'),
-                text            : this.getAttribute('text'),
-                value           : this.getAttribute('value'),
-                total           : this.getAttribute('total'),
-                backgroundColor : this.getAttribute('background-color'),
-                valueColor      : this.getAttribute('value-color')
+                radius          : +this.getAttribute('radius') || undefined,
+                holeSize        : +this.getAttribute('hole-size') || undefined,
+                text            : this.getAttribute('text') || undefined,
+                value           : +this.getAttribute('value') || undefined,
+                total           : +this.getAttribute('total') || undefined,
+                backgroundColor : this.getAttribute('background-color') || undefined,
+                valueColor      : this.getAttribute('value-color') || undefined
             };
             ReactDOM.render((
                 <DonutChart {...props}/>

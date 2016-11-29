@@ -2,18 +2,24 @@ var webpack = require('webpack');
 var config = require('./webpack.config');
 var statsConfig = require('./statsConfig');
 
-var preactCompat = {
-    root: 'preactCompat',
-    commonjs2: 'preact-compat',
-    commonjs: 'preact-compat'
+var react = {
+    root: 'React',
+    commonjs2: 'react',
+    commonjs: 'react'
+};
+
+var reactDom = {
+    root: 'ReactDOM',
+    commonjs2: 'react-dom',
+    commonjs: 'react-dom'
 };
 
 config.externals = {
-    'react': preactCompat,
-    'react-dom': preactCompat
+    'react': react,
+    'react-dom': reactDom
 };
 config.entry = './src/DonutChartUMD.js';
-config.output.filename = 'DonutChartPreact.js';
+config.output.filename = 'DonutChartReact.js';
 config.output.library = 'DonutChart';
 config.output.libraryTarget = 'umd';
 

@@ -1,25 +1,11 @@
 var webpack = require('webpack');
 
-var preactCompat = 'preactCompat';
-
 module.exports = {
-    entry: './src/DonutChart.js',
     output: {
-        path: './dist',
-        filename: 'DonutChart.js',
-        library : 'DonutChart',
-        libraryTarget : 'umd'
+        path: './dist'
     },
     resolve: {
         extensions: ['', '.js'],
-        // alias: {
-        //     'react': 'preact-compat',
-        //     'react-dom': 'preact-compat'
-        // }
-    },
-    externals: {
-        'react': preactCompat,
-        'react-dom' : preactCompat
     },
     module: {
         loaders: [
@@ -38,16 +24,12 @@ module.exports = {
                         'transform-react-constant-elements'
                     ]
                 }
-            },
-            {
-                test: /\.css$/,
-                loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]_[hash:base64:5]'
             }
         ]
     },
     plugins: [
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': `'production'`
+            'process.env.NODE_ENV': "'production'"
         }),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.OccurrenceOrderPlugin(),

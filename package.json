@@ -1,0 +1,45 @@
+{
+  "name": "future-charts-example",
+  "version": "0.9.13",
+  "description": "Future Charts - Example",
+  "scripts": {
+    "build:preact": "node ./scripts/build-as-preact-component.js",
+    "build:react": "node ./scripts/build-as-react-component.js",
+    "build:webcomponent": "node ./scripts/build-as-web-component.js",
+    "build": "npm run build:preact && npm run build:react && npm run build:webcomponent"
+  },
+  "keywords": [
+    "chart",
+    "charts",
+    "react",
+    "preact",
+    "jquery",
+    "angular",
+    "web components",
+    "future"
+  ],
+  "devDependencies": {
+    "babel-core": "6.18.2",
+    "babel-loader": "6.2.8",
+    "babel-plugin-transform-react-constant-elements": "6.9.1",
+    "babel-plugin-transform-react-remove-prop-types": "0.2.11",
+    "babel-preset-latest": "6.16.0",
+    "babel-preset-react": "6.16.0",
+    "babel-preset-stage-0": "6.16.0",
+    "webpack": "1.13.3"
+  },
+  "dependencies": {
+    "preact": "6.4.0",
+    "preact-compat": "3.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrCheater/future-charts-example.git"
+  },
+  "author": "Mr.Cheater (Zhukov Anton)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MrCheater/future-charts-example/issues"
+  },
+  "homepage": "https://github.com/MrCheater/future-charts-example#readme"
+}

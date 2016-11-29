@@ -1,7 +1,6 @@
-import { Component } from 'react';
-import styles from './DonutChart.css';
+import React from 'react';
 
-export default class DonutChart extends Component {
+export default class DonutChart extends React.Component {
     render() {
         const { radius, holeSize, text, value, total, backgroundColor, valueColor } = this.props;
         const r = radius * (1 - (1 - holeSize)/2);
@@ -11,7 +10,10 @@ export default class DonutChart extends Component {
         const transform = 'rotate(-90 ' + radius + ',' + radius + ')';
         const fontSize = r * holeSize * 0.6;
         return (
-            <div className = {styles['root']}>
+            <div style = {{
+                textAlign: 'center',
+                fontFamily: 'sans-serif'
+            }}>
                 <svg
                     width = {radius * 2 + 'px'}
                     height = {radius * 2 + 'px'}
@@ -46,7 +48,9 @@ export default class DonutChart extends Component {
                         {~~(value * 1000 / total) / 10}%
                     </text>
                 </svg>
-                <div className = {styles['text']}>
+                <div style = {{
+                    marginTop: '10px'
+                }}>
                     {text}
                 </div>
             </div>
