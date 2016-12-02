@@ -9,8 +9,7 @@
     "build:vanila": "node ./scripts/build-as-vanila-component.js",
     "build:jquery": "node ./scripts/build-as-jquery-component",
     "build:angular": "node ./scripts/build-as-angular-component",
-    "build:server": "node ./scripts/build-as-webshot-server",
-    "build": "npm run build:preact && npm run build:react && npm run build:webcomponent && npm run build:vanila && npm run build:jquery && npm run build:angular && build:server"
+    "build": "npm run build:preact && npm run build:react && npm run build:webcomponent && npm run build:vanila && npm run build:jquery && npm run build:angular"
   },
   "keywords": [
     "chart",
