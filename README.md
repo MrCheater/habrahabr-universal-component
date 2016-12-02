@@ -4,7 +4,7 @@
 http://codepen.io/collection/nkeWod/
 
 #More info
-
+https://habrahabr.ru/company/devexpress/blog/316358/
 
 #Usage
 ```bash
