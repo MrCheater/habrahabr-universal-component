@@ -1,7 +1,7 @@
 {
-  "name": "future-charts-example",
-  "version": "0.9.17",
-  "description": "Future Charts - Example",
+  "name": "habrahabr-universal-component",
+  "version": "1.0.0",
+  "description": "Habrahabr-universal-component",
   "scripts": {
     "build:preact": "node ./scripts/build-as-preact-component.js",
     "build:react": "node ./scripts/build-as-react-component.js",
@@ -9,7 +9,8 @@
     "build:vanila": "node ./scripts/build-as-vanila-component.js",
     "build:jquery": "node ./scripts/build-as-jquery-component",
     "build:angular": "node ./scripts/build-as-angular-component",
-    "build": "npm run build:preact && npm run build:react && npm run build:webcomponent && npm run build:vanila && npm run build:jquery && npm run build:angular"
+    "build:server": "node ./scripts/build-as-webshot-server",
+    "build": "npm run build:preact && npm run build:react && npm run build:webcomponent && npm run build:vanila && npm run build:jquery && npm run build:angular && build:server"
   },
   "keywords": [
     "chart",
@@ -34,16 +35,16 @@
   },
   "dependencies": {
     "preact": "6.4.0",
-    "preact-compat": "3.9.2"
+    "preact-compat": "3.9.2",
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MrCheater/future-charts-example.git"
+    "url": "git+https://github.com/MrCheater/habrahabr-universal-component.git"
   },
   "author": "Mr.Cheater (Zhukov Anton)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MrCheater/future-charts-example/issues"
+    "url": "https://github.com/MrCheater/habrahabr-universal-component/issues"
   },
-  "homepage": "https://github.com/MrCheater/future-charts-example#readme"
+  "homepage": "https://github.com/MrCheater/habrahabr-universal-component#readme"
 }
