@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "preact": "6.4.0",
-    "preact-compat": "3.9.2",
+    "preact-compat": "3.9.2"
   },
   "repository": {
     "type": "git",
